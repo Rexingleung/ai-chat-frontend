@@ -61,7 +61,7 @@
 6. **设置 DeepSeek API Key**
    ```bash
    wrangler secret put DEEPSEEK_API_KEY
-   # 输入: sk-c7bae2605b6e48feb8ff9d626045e79a
+   # 输入: key
    ```
 
 7. **创建 package.json**

@@ -251,7 +251,7 @@ const resolvers = {
 // DeepSeek API 调用函数
 async function callDeepSeekAPI(env, { message, history, model = 'deepseek-chat', temperature = 0.7, maxTokens = 1000 }) {
   // 使用提供的 DeepSeek API Key
-  const apiKey = env.DEEPSEEK_API_KEY || 'sk-c7bae2605b6e48feb8ff9d626045e79a';
+  const apiKey = env.DEEPSEEK_API_KEY || '';
   
   if (!apiKey) {
     throw new Error('DeepSeek API Key 未配置');
@@ -423,7 +423,7 @@ function validateMessageInput(input) {
 // 健康检查函数
 async function checkDeepSeekStatus(env) {
   try {
-    const apiKey = env.DEEPSEEK_API_KEY || 'sk-c7bae2605b6e48feb8ff9d626045e79a';
+    const apiKey = env.DEEPSEEK_API_KEY || '';
     if (!apiKey) return false;
     
     const response = await fetch('https://api.deepseek.com/v1/models', {

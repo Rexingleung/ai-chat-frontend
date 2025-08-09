@@ -1,0 +1,27 @@
+name = "ai-chat-graphql"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[[kv_namespaces]]
+binding = "CHAT_DB"
+id = "ba0034599bda4b84898997222d4e3205"
+preview_id = "eb3189e7e1734abc94d6c3445220e5da"
+
+[[kv_namespaces]]
+binding = "RATE_LIMIT"
+id = "fff17831a06c4ab49006933ddf905a44"
+preview_id = "7e2d0d775a3e45f38af1af5d3038a59a"
+
+[vars]
+ENVIRONMENT = "production"
+MAX_MESSAGE_LENGTH = "2000"
+RATE_LIMIT_PER_MINUTE = "30"
+
+[env.development]
+name = "ai-chat-graphql-dev"
+
+[env.development.vars]
+ENVIRONMENT = "development"
+RATE_LIMIT_PER_MINUTE = "100"
+
